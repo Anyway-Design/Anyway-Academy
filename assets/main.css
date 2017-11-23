@@ -396,6 +396,7 @@ h4 a:hover,
 	padding: .3em .8em;
 	font-size: 2rem;
 	display: inline-block;
+	font-weight: 700;
 	transition: all .15s cubic-bezier(.8, 0, .2, 1);
 }
 .enroll-btn:hover {
