@@ -4,18 +4,18 @@ var gulp = require('gulp'),
  
 var cdnUrl = [
 	[ '<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"assets/fonts.css\" type=\"text/css\" media=\"all\" />', '' ],
-	[ 'assets/in-view.min.js', 'http://anyway-web.b0.upaiyun.com/js/in-view.min.js' ],
-	[ 'assets/', 'http://anyway-web.b0.upaiyun.com/anyway.academy/' ]
+	[ 'assets/in-view.min.js', 'https://anyway-web.b0.upaiyun.com/js/in-view.min.js' ],
+	[ 'assets/', 'https://anyway-web.b0.upaiyun.com/anyway.academy/' ]
 ];
 
 var fontUrl = [
-	[ 'fonts/', 'http://anyway-web.b0.upaiyun.com/anyway.academy/' ]
+	[ 'fonts/', 'https://anyway-web.b0.upaiyun.com/anyway.academy/' ]
 ];
 
  
 gulp.task('default', function() {
 	gulp.src(['index.html','*.php'])
-		.pipe(plugins.fontSpider({ignore: ['assets/fonts.css','http://anyway-web.b0.upaiyun.com/css/fontello.css']}));
+		.pipe(plugins.fontSpider({ignore: ['assets/fonts.css','https://anyway-web.b0.upaiyun.com/css/fontello.css']}));
 
 	gulp.src(['*.html','*.php'])
 		.pipe(plugins.batchReplace(cdnUrl))
