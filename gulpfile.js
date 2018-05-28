@@ -24,7 +24,8 @@ gulp.task('default', function() {
 		}))
 		.pipe(plugins.deleteLines({
       'filters': [
-			/<script(?:\s+[^>]*)?>(.*?)fonts(.*?)<\/script\s*>/i
+
+			/<link(.*?)fonts(.*?)>/i
       ]
     }))
 		.pipe(plugins.batchReplace(cdnUrl))
